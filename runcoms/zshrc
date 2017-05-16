@@ -10,4 +10,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 # Customize to your needs...
+[ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.extra ] && source ~/.extra
+
+# more
+
+# Disable autocorrect guesses. Happens when typing a wrong
+# command that may look like an existing one.	
+unsetopt CORRECT

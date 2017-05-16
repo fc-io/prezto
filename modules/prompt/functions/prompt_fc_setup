@@ -1,0 +1,28 @@
+function prompt_fc_precmd {
+  git-info
+}
+
+function prompt_fc_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_fc_precmd
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:branch' format '%F{6}%b%f'
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' ' on $(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s' \
+    'rprompt' '%C%D'
+
+  # Define prompts.
+  PROMPT='%F{blue}%~%f${(e)git_info[prompt]} %F{8}$%f '
+  RPROMPT=''
+}
+
+prompt_fc_setup "$@"
