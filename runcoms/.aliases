@@ -6,25 +6,28 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 # Shortcuts
+alias b="cd ~/Dropbox/_projects/bullcall-analytics/dev"
 alias drop="cd ~/Dropbox"
 alias d="cd ~/Dropbox/Developer" # Conflicts with command dd
 alias dw="cd ~/Dropbox/Developer\ Web"
 alias down="cd ~/Downloads"
 alias desk="cd ~/Desktop"
+alias p="cd ~/Dropbox/_projects"
+alias t="cd ~/Dropbox/_projects/time/dev/ios"
 alias h="history"
 alias j="jobs"
 alias o="open"
 alias oo="open ."
 
 # Editors
+alias s="subl"
 alias v="vim"
 alias a="atom"
-alias s="open -a Sketch"
+alias sketch="open -a Sketch"
 alias x="open -a Xcode"
 
-# chrome canary unsafe
-alias canu='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security'
-alias canarycors='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security'
+# Dev
+alias y="yarn"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -70,3 +73,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# chrome canary unsafe
+alias canu='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security'
+alias canarycors='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security'
