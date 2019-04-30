@@ -48,6 +48,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gbV='git branch --verbose --verbose'
   alias gbx='git branch --delete'
   alias gbX='git branch --delete --force'
+  ## List all branches (refs/heads) and print last commit datetime
+  alias gbh="git for-each-ref --sort='-committerdate:iso8601' --format=' %(committerdate:iso8601)%09%(refname)' refs/heads"
 
   # Commit (c)
   alias gc='git commit --verbose'
